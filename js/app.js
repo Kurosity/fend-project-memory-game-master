@@ -86,25 +86,14 @@ function closeCard(){
 */
 
 function Begin(){
-    //startTime = Date.now().toFixed(0);
-    //timer();
     time = setInterval(timer, 1000);
 };
 function End(){
     clearInterval(time);
-    //minute = 0;
-    //second = 0;
-   // currentTime = Date.now().toFixed(0);
-    //elaspeTime = ((Math.floor((currentTime - startTime)/1000))/60).toFixed(2);
 };
 
-//let y = setInterval(timer, 1000);
-
 function timer(){
-   //currentTime = Date.now().toFixed(0);
     second++;
-    //let minute = setInterval((((currentTime - startTime)/1000)/60).toFixed(0), 1000);
-    //let second = (((currentTime - startTime)/1000)%60).toFixed(0);
 
     if (second === 60){
         minute++;
@@ -173,8 +162,6 @@ myCards.forEach(
 
                     if (clickCount == 1){
                         Begin();
-                        //let y = setInterval(timer, 1000);
-                        //timer();
                     }
             
                     if(maxOpen.length == 2){
@@ -246,7 +233,6 @@ function counter(){
 
 function score(){
     if (move === 16){
-       // stars[0].remove(); //Change to remove the class instead of the whole thing
         stars[0].classList.toggle('fa-star');
     }
     else if (move === 24){
