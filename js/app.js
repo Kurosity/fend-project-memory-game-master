@@ -52,6 +52,7 @@ reset.addEventListener('click', resetBoard);
 
 function resetBoard(){
     closeCard();
+    clearInterval(time);
     if (move >= 16){
          stars[0].classList.toggle('fa-star');
          if (move >= 24){
@@ -59,15 +60,16 @@ function resetBoard(){
          }
      }
 
+    maxOpen = [];
     
     move = 0;
     clickCount = 0;
     document.querySelector('.moves').innerHTML = move;
     cardShuffle();
-   
-    clearInterval(time);
+    
     minute = 0;
     second = 0;
+    document.querySelector('.timer').innerHTML = minute + ' : 0' + second;    
 };
 
 /*
